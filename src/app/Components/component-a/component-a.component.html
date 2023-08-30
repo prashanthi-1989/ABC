@@ -1,0 +1,20 @@
+<p>component-a works!</p>
+<ng-container *ngIf="shouldShow">
+    <div *ngFor="let order of orders">
+        <li>{{order}}</li>
+    </div>
+</ng-container>
+
+<ng-template #myTemplate let-item>
+    <p class="mytemplate">{{ item }}</p>
+</ng-template>
+<div  *ngFor="let item of orders; template: myTemplate"></div>
+
+<ng-template *ngIf="shouldShow; else noItems">
+    <div class="shouldShow" *ngFor="let item of orders">{{ item }}</div>
+</ng-template>
+
+<ng-template #noItems>
+  <p>No items to display.</p>
+</ng-template>
+

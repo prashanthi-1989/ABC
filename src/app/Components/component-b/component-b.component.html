@@ -1,0 +1,14 @@
+<p>component-b works!</p>
+<ng-container *ngTemplateOutlet="selectedTemplate"></ng-container>
+
+<ng-template #templateA>
+  <p>Template A content</p>
+</ng-template>
+
+<ng-template #templateB>
+  <p>Template B content</p>
+</ng-template>
+
+<button (click)="selectedTemplate = templateA">Show Template A</button>
+<button (click)="selectedTemplate = templateB">Show Template B</button>
+

@@ -1,0 +1,8 @@
+<p>Dynamic Component Example</p>
+<select [(ngModel)]="selectedOption" class="form-control">
+  <option value="componentA">Component A</option>
+  <option value="componentB">Component B</option>
+  <option value="componentC">Component C</option>
+</select>
+<button (click)="openPopup()">Open Popup</button>
+<div #popupContainer></div>
